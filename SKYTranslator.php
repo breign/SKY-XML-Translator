@@ -27,7 +27,9 @@ xml_compare($M, $C);
 
 function xml_compare($M, $C) {
 
+	$MX = simplexml_load_string($M, 'SimpleXMLElement', LIBXML_NOCDATA);
+	$json = json_encode($MX);
+	$array = json_decode($json,TRUE);
 
-
-	die('<xml ......>...');
+	print_r($array);
 }
