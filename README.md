@@ -1,4 +1,7 @@
-== SKYTranslator 
+# SKYTranslator
+Tool for managing XML files - from master to clone
+
+# Usage
 takes master and cloned xml and then stdouts fixed clone,
 with all the elements in the same order, and with all
 the missing CDATA prepended with !FIXME! copied from master
