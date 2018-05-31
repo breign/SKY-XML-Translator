@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<language type="sr_RS" name="Srpski - RS" version="2.0.0" date="23.12.12" author="benjamin povirk">
+	<buttons>
+		<button id="btn_activate">
+			<label><![CDATA[Aktiviraj]]></label>
+		</button>
+		<button id="all_articles">
+			<label><![CDATA[Prodajni artikli]]></label>
+		</button>
+		<button id="order_back">
+			<label><![CDATA[Nazaj na naročilo]]></label>
+		</button>
+		<button id="order_changes_apply">
+			<label><![CDATA[Shrani naročilo]]></label>
+		</button>
+		<button id="open">
+			<label><![CDATA[Odpri]]></label>
+		</button>
+		<button id="save">
+			<label><![CDATA[Shrani]]></label>
+		</button>
+		<button id="customer">
+			<label><![CDATA[Stranka]]></label>
+		</button>
+		<button id="discard">
+			<label><![CDATA[Izbriši]]></label>
+		</button>
+		<button id="back">
+			<label><![CDATA[Nazaj]]></label>
+		</button>
+		<button id="order_add_article">
+			<label><![CDATA[Dodaj]]></label>
+		</button>
+		<button id="order">
+			<label><![CDATA[Naročilo]]></label>
+		</button>
+		<button id="deauth">
+			<label><![CDATA[Izklopi]]></label>
+		</button>
+		<button id="connect">
+			<label><![CDATA[Ni komunikacije. Poveži!]]></label>
+		</button>
+		<button id="connecting">
+			<label><![CDATA[Povezovanje]]></label>
+		</button>
+		<button id="connected">
+			<label><![CDATA[Povezano]]></label>
+		</button>
+		<button id="sync_tables">
+			<label><![CDATA[Poveži in sinhroniziraj]]></label>
+		</button>
+		<button id="syncing_tables">
+			<label><![CDATA[Sihronizacija]]></label>
+		</button>
+		<button id="close">
+			<label><![CDATA[Zapri]]></label>
+		</button>
+		<button id="save">
+			<label><![CDATA[Shrani]]></label>
+		</button>
+		<button id="with_order">
+			<label><![CDATA[Več...]]></label>
+		</button>
+		<button id="customer_search">
+			<label><![CDATA[Išči v bazi]]></label>
+		</button>
+		<button id="customer_apply">
+			<label><![CDATA[Shrani in dodaj stranko]]></label>
+		</button>
+		<button id="customer_back">
+			<label><![CDATA[Nazaj na izbiro strank]]></label>
+		</button>
+	</buttons>
+	<textBoxes>
+		<textbox id="deactivate_help">
+			<text><![CDATA[SKY POS Touch je deaktiviran.]]></text>
+		</textbox>
+		<textbox id="txt_activation">
+			<text><![CDATA[
+Dobrodošli!
+Da bi aktivirali aplikacijo, pridobite aktivacijski ključ s strani vašega distributerja.
+			
+Pokličite: 
++386 (0) 41 662 681 (Marko)
++386 (0) 31 660 100 (Benjamin)
+		]]></text>
+		</textbox>		
+		<textbox id="txt_activation_start">
+			<text><![CDATA[Aktivacija je v teku. Trenutek prosim..]]></text>
+		</textbox>
+		<textbox id="txt_activation_start_fail">
+			<text><![CDATA[Aktivacija ni uspela. Vnesite točne podatke in pokusite ponovno.]]></text>
+		</textbox>
+		<textbox id="ordListHelp">
+			<text><![CDATA[Tukaj prikazujem naročilo izbranih artiklov. Trenutno naročilo je prazno. Izberite artikle z iskalnikom, z dotikom na (+) direktno, z dotikom na ime artikla ali pa odprite obstoječo mizo]]></text>
+		</textbox>
+		<textbox id="walk">
+			<text><![CDATA[Hod]]></text>
+		</textbox>
+		<textbox id="connection_help">
+			<text><![CDATA[Povezujem se s SKY POS Blagajno v aktivni poslovni enoti. 
+Povezovanje lahko traja tudi do 15 sekund.
+Za uporabo je potrebna WiFi povezava z isto mrežo kot SKY POS blagajna.]]></text>
+		</textbox>
+	</textBoxes>
+	<inputBoxes>
+		<input id="inp_taxnum">
+			<text><![CDATA[Vnesite davčno številko:]]></text>
+		</input>
+		<input id="inp_aci">
+			<text><![CDATA[Vnesite aktivacijski ključ:]]></text>
+		</input>
+		<input id="inp_serverIP">
+			<text><![CDATA[SKY POS IP naslov]]></text>
+		</input>
+		<input id="inp_search">
+			<text><![CDATA[Išči...]]></text>
+		</input>
+		<input id="inp_new_order">
+			<text><![CDATA[Novo naročilo]]></text>
+		</input>
+		<input id="inp_taxnum">
+			<text><![CDATA[Davčna št.]]></text>
+		</input>
+		<input id="inp_firm">
+			<text><![CDATA[Ime]]></text>
+		</input>
+		<input id="inp_address">
+			<text><![CDATA[Naslov]]></text>
+		</input>
+		<input id="inp_postnum">
+			<text><![CDATA[Poštna št.]]></text>
+		</input>
+		<input id="inp_postname">
+			<text><![CDATA[Mesto]]></text>
+		</input>
+		<input id="inp_discount">
+			<text><![CDATA[0% popust]]></text>
+		</input>
+	</inputBoxes>
+	<checkBoxes>
+		<checkbox id="chk_show_mine_only">
+			<label><![CDATA[Prikazi samo moje]]></label>
+		</checkbox>
+		<checkbox id="chk_articles_merge">
+			<label><![CDATA[Združuj količine istih artiklov]]></label>
+		</checkbox>
+		<checkbox id="chk_article_add">
+			<label><![CDATA[Hitro dodajanje artikla na naročilo]]></label>
+		</checkbox>
+		<checkbox id="chk_order_self">
+			<label><![CDATA[Prikaži samo moja naročila]]></label>
+		</checkbox>
+		<checkbox id="chk_taxcommited">
+			<label><![CDATA[Zavezanec]]></label>
+		</checkbox>
+		<checkbox id="chk_foreign">
+			<label><![CDATA[HQ abroad]]></label>
+		</checkbox>
+	</checkBoxes>
+	<titles>
+		<title id="article_most_used">
+			<text><![CDATA[Najpogostejši artikli]]></text>
+		</title>
+		<title id="article_most_used_num">
+			<text><![CDATA[##NUM## najpogostejših artiklov]]></text>
+		</title>
+		<title id="article_edit">
+			<text><![CDATA[Uredi artikel]]></text>
+		</title>
+		<title id="articles">
+			<text><![CDATA[Prodajni artikli]]></text>
+		</title>
+		<title id="groups">
+			<text><![CDATA[Skupine]]></text>
+		</title>
+		<title id="orders">
+			<text><![CDATA[Naročila]]></text>
+		</title>
+		<title id="settings">
+			<text><![CDATA[Nastavitve]]></text>
+		</title>
+		<title id="order_view">
+			<text><![CDATA[Pregled naročila]]></text>
+		</title>
+		<title id="order_opened">
+			<text><![CDATA[Odprto naročilo]]></text>
+		</title>
+		<title id="order_edit_new">
+			<text><![CDATA[Uredi NOVO naročilo]]></text>
+		</title>
+		<title id="order_edit">
+			<text><![CDATA[Uredi naročilo]]></text>
+		</title>
+		<title id="article_edit">
+			<text><![CDATA[Uredi artikel]]></text>
+		</title>
+		<title id="article_edit">
+			<text><![CDATA[Uredi artikel]]></text>
+		</title>
+		<title id="connection">
+			<text><![CDATA[Povezava s POS blagajno]]></text>
+		</title>
+		<title id="clients">
+			<text><![CDATA[Stranka]]></text>
+		</title>
+		<title id="positions">
+			<text><![CDATA[Naročila/Mize]]></text>
+		</title>
+		<title id="position_select">
+			<text><![CDATA[Izberi Naročilo/Mizo]]></text>
+		</title>
+		<title id="client_add">
+			<text><![CDATA[Najdi stranko]]></text>
+		</title>
+	</titles>
+	<labels>
+		<label id="groups">
+			<text><![CDATA[Skupine]]></text>
+		</label>
+		<label id="articles">
+			<text><![CDATA[Artikli]]></text>
+		</label>
+		<label id="orders">
+			<text><![CDATA[Mize]]></text>
+		</label>
+		<label id="settings">
+			<text><![CDATA[Touch]]></text>
+		</label>
+		<label id="article_comment_add">
+			<text><![CDATA[NOV KOMENTAR]]></text>
+		</label>
+		<label id="client_remove_from_order">
+			<text><![CDATA[Odstrani stranko]]></text>
+		</label>
+		<label id="client_add_new">
+			<text><![CDATA[Išči stranko]]></text>
+		</label>
+
+		<label id="connecting_with">
+			<text><![CDATA[Povezovanje z]]></text>
+		</label>
+		<label id="connecting_error">
+			<text><![CDATA[Napaka pri povezavi...
+Poskusi ponovno!]]></text>
+		</label>
+		<label id="invoicing_success">
+			<text><![CDATA[Račun je kreiran na :'##DEVICE##' in se bo natisnil na :'##PRINTER##']]></text>
+		</label>
+		<label id="invoicing_error">
+			<text><![CDATA[Napaka pri kreiranju računa! Poskusi direktno na POS-u:]]></text>
+		</label>
+		<label id="invoicing_make">
+			<text><![CDATA[Kreiranje računa...]]></text>
+		</label>
+		<label id="order_save">
+			<text><![CDATA[Shranjujem naročilo...]]></text>
+		</label>
+		<label id="order_list">
+			<text><![CDATA[Pregled naročil...]]></text>
+		</label>
+		<label id="order_list_none">
+			<text><![CDATA[Ni shranjenih naročil]]></text>
+		</label>
+		<label id="table_list_none">
+			<text><![CDATA[Ni prednastavljenih pozicij/miz]]></text>
+		</label>
+		<label id="payment">
+			<text><![CDATA[Plačilo]]></text>
+		</label>
+		<label id="customer_saving_error">
+			<text><![CDATA[Napaka pri shranjevanje stranke. Poskusi ponovno ali pa stranko uredi na POS-u.]]></text>
+		</label>
+		<label id="click_to_close">
+			<text><![CDATA[Pritisni tu, da skriješ to opozorilo]]></text>
+		</label>
+		<label id="error_orders_retrieve">
+			<text><![CDATA[Naročilo NI shranjeno, napaka pri povezavi s POS-om! Preveri in poskusi ponovno.]]></text>
+		</label>
+		<label id="error_order_store">
+			<text><![CDATA[Naročilo NI shranjeno, napaka pri povezavi s POS-om! Preveri in poskusi ponovno.]]></text>
+		</label>
+	</labels>
+	<alerts>
+		<alert id="error_network">
+			<title><![CDATA[Napaka: WiFi]]></title>
+			<text> <![CDATA[Vključite WiFi na vaši napravi in poskusite ponovno]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[OK]]></okLabel>
+		</alert>
+		<alert id="article_comment">
+			<title><![CDATA[Dodaj komentar za artikel]]></title>
+			<text> <![CDATA[Vnesi komentar za artikel]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[OK]]></okLabel>
+		</alert>
+		<alert id="deauth">
+			<title><![CDATA[Deaktivacija...]]></title>
+			<text><![CDATA[Ste prepričani da želite deaktivirati aplikacijo? Če boste želeli še uporabljati aplikacijo, boste morali kontaktirati vašega distributerja za ponovno aktivacijo. Koda je 5515.]]></text>
+			<prompt><![CDATA[Vnesi kodo]]></prompt>
+		</alert>
+		<alert id="auth">
+			<title><![CDATA[Prijava]]></title>
+			<text><![CDATA[Vnesite vaše PIN geslo]]></text>
+			<prompt><![CDATA[PIN geslo]]></prompt>
+			<okLabel><![CDATA[OK]]></okLabel>
+		</alert>
+		<alert id="unauthorized">
+			<title><![CDATA[Dostop zavrnjen]]></title>
+			<text><![CDATA[PIN ni OK. Poskusite ponovno...]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[OK]]></okLabel>
+		</alert>
+		<alert id="activationFailed">
+			<title><![CDATA[Aktiviranje ni uspelo]]></title>
+			<text><![CDATA[Preverite vaše podatke, internetno povezavo ter poskusite ponovno.]]></text>
+			<okLabel><![CDATA[OK]]></okLabel>
+		</alert>
+		<alert id="activationFailedPermanently">
+			<title><![CDATA[Aktivacija neuspesna]]></title>
+			<text><![CDATA[Aktivacija je ogranicena na odredjeni broj pokusaja. Dostigli ste maksimalno. Aplikacija ce se zatvoriti. Pokrenite SKY POS i unesite tacan kod za aktiviranje i poreski broj. Hvala!]]></text>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="activationSuccessfull">
+			<title><![CDATA[Aktivacija je zaključena]]></title>
+			<text><![CDATA[Aktivacija na tej napravi je uspela :)]]></text>
+			<okLabel><![CDATA[OK]]></okLabel>
+		</alert>
+		<alert id="activationTypeUnknown">
+			<title><![CDATA[Greska pri aktivaciji]]></title>
+			<text><![CDATA[Aktivacija je prekinuta iz nepoznatih razloga, pokusajte ponovo...]]></text>
+			<okLabel><![CDATA[Zatvori]]></okLabel>
+		</alert>
+		<alert id="selectCustomer">
+			<title><![CDATA[Izberi stranko]]></title>
+			<text><![CDATA[Najprej izberite stranko, nato pa izdajte račun.]]></text>
+			<okLabel><![CDATA[V redu]]></okLabel>
+			<cancelLabel></cancelLabel>
+		</alert>
+		<alert id="selectPrinter">
+			<title><![CDATA[Izberi tiskalnik]]></title>
+			<text><![CDATA[Pred izdajo računa, izberite tiskalnik (Touch)]]></text>
+			<okLabel><![CDATA[V redu]]></okLabel>
+			<cancelLabel></cancelLabel>
+		</alert>
+		<alert id="workTimeRegistration">
+			<title><![CDATA[Delovni čas]]></title>
+			<text><![CDATA[Najprej se prijavite v Delovni čas na vaši POS blagajni.]]></text>
+			<okLabel><![CDATA[OK]]></okLabel>
+			<cancelLabel></cancelLabel>
+		</alert>
+		<alert id="TABLE_take_over_user">
+			<title><![CDATA[Naročilo je zasedeno]]></title>
+			<text><![CDATA[Naročilo je zasedeno, uporablja ga drug uporabnik. Nimate pravice za prevzemanje naročil. Kontaktirajte managerja in na POS blagajni prevzemite naročilo.]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[V redu]]></okLabel>
+		</alert>
+		<alert id="invoice_already_printed">
+			<title><![CDATA[Tega računa ne moreš izdati!]]></title>
+			<text><![CDATA[Naročilo je že bilo poračunano na: ]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[V redu]]></okLabel>
+		</alert>
+		<alert id="order_local_warning">
+			<title><![CDATA[Akcija ni dovoljena!]]></title>
+			<text><![CDATA[Obstaja nezaključeno NAROČILO. Najprej zaključi odprto NAROČILO!]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[V redu]]></okLabel>
+		</alert>
+		<alert id="order_changed_on_pos">
+			<title><![CDATA[Naročilo ni shranjeno!]]></title>
+			<text><![CDATA[Naročilo je v obdelavi na POS Blagajni.]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[V redu]]></okLabel>
+		</alert>
+		<alert id="comming_soon">
+			<title><![CDATA[Delamo na tem!]]></title>
+			<text><![CDATA[Funkcija še ni na voljo, delamo na tem.]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[V redu]]></okLabel>
+		</alert>
+		<alert id="split_transfer_start">
+			<title><![CDATA[Prenos količine]]></title>
+			<text><![CDATA[Vpišite količino ##ARTICLE##, ki jo želiš prenesti.\nStara količina: ]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[V redu]]></okLabel>
+		</alert>
+		<alert id="split_transfer_too_big">
+			<title><![CDATA[Prenos količine]]></title>
+			<text><![CDATA[Zahtevana količina prenosa ##ARTICLE## je večja od obstoječe količine.]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[V redu]]></okLabel>
+		</alert>
+	</alerts>
+</language>

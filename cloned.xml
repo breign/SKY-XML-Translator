@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<language type="sr_RS" name="Srpski - RS" version="2.0.0" date="23.12.12" author="boris orihan">
+	<buttons>
+		<button id="btn_activate">
+			<label><![CDATA[Aktiviraj]]></label>
+		</button>
+		<button id="all_articles">
+			<label><![CDATA[Prodaji artikli]]></label>
+		</button>
+		<button id="order_back">
+			<label><![CDATA[Nazad na porudžbinu]]></label>
+		</button>
+		<button id="order_changes_apply">
+			<label><![CDATA[Sačuvaj izmene za porudžbinu]]></label>
+		</button>
+		<button id="save">
+			<label><![CDATA[Snimi]]></label>
+		</button>
+		<button id="customer">
+			<label><![CDATA[Kupac]]></label>
+		</button>
+		<button id="discard">
+			<label><![CDATA[Izbriši]]></label>
+		</button>
+		<button id="back">
+			<label><![CDATA[Nazad]]></label>
+		</button>
+		<button id="order_add_article">
+			<label><![CDATA[Dodaj]]></label>
+		</button>
+		<button id="order">
+			<label><![CDATA[Porudžbina]]></label>
+		</button>
+		<button id="deauth">
+			<label><![CDATA[Isključi uređaj]]></label>
+		</button>
+		<button id="connect">
+			<label><![CDATA[Nema komunikacije. Povezi!]]></label>
+		</button>
+		<button id="connecting">
+			<label><![CDATA[Povezivanje]]></label>
+		</button>
+		<button id="connected">
+			<label><![CDATA[Povezano….Nije povezano]]></label>
+		</button>
+		<button id="sync_tables">
+			<label><![CDATA[Sihronizacija sa blagajnom]]></label>
+		</button>
+		<button id="syncing_tables">
+			<label><![CDATA[Sihronizacija]]></label>
+		</button>
+		<button id="close">
+			<label><![CDATA[Zatvori]]></label>
+		</button>
+		<button id="with_order">
+			<label><![CDATA[Sa porudžbinom...]]></label>
+		</button>
+		<button id="customer_search">
+			<label><![CDATA[Traži u bazi]]></label>
+		</button>
+		<button id="customer_apply">
+			<label><![CDATA[Sacuvaj I dodaj kupca]]></label>
+		</button>
+		<button id="customer_back">
+			<label><![CDATA[Nazad na listu klijenata]]></label>
+		</button>
+	</buttons>
+	<textBoxes>
+		<textbox id="deactivate_help">
+			<text><![CDATA[SKY POS Touch je deaktiviran. Pritisnite Home dugme da napustite aplikaciju]]></text>
+		</textbox>
+		<textbox id="txt_activation">
+			<text><![CDATA[
+Da bi aktivirali aplikaciju, morate dobiti aktivacioni kod od strane zastupnika NAV Soft d.o.o.
+			
+Obratite se na broj: 
++381 (0) 61 1400077
+		]]></text>
+		</textbox>		
+		<textbox id="txt_activation_start">
+			<text><![CDATA[Aktivacija se obradjuje. Trenutak molim Vas..]]></text>
+		</textbox>
+		<textbox id="txt_activation_start_fail">
+			<text><![CDATA[Aktivacija nije uspela.Unesite tacne podatke i pokusajte ponovo.]]></text>
+		</textbox>
+		<textbox id="ordListHelp">
+			<text><![CDATA[Odaberi artikle ->]]></text>
+		</textbox>
+		<textbox id="walk">
+			<text><![CDATA[Kurs]]></text>
+		</textbox>
+		<textbox id="connection_help">
+			<text><![CDATA[Uspostavlja se veza sa SKY POS Blagajnom u aktivnoj poslovnoj jedinici. Za uspešnu konekciju treba da ste konektovani sa telefonom na Wifi u istoj mreži kao blagajna. Nakon uspešne konekcije, koristite PIN lozinku kao na blagajni.]]></text>
+		</textbox>
+	</textBoxes>
+	<inputBoxes>
+		<input id="inp_taxnum">
+			<text><![CDATA[Unesite PDV broj:]]></text>
+		</input>
+		<input id="inp_aci">
+			<text><![CDATA[Unesite aktivacioni kod:]]></text>
+		</input>
+		<input id="inp_serverIP">
+			<text><![CDATA[SKY POS IP adresa]]></text>
+		</input>
+		<input id="inp_search">
+			<text><![CDATA[Traži...]]></text>
+		</input>
+		<input id="inp_new_order">
+			<text><![CDATA[Novi sto]]></text>
+		</input>
+		<input id="inp_taxnum">
+			<text><![CDATA[PDV br.]]></text>
+		</input>
+		<input id="inp_firm">
+			<text><![CDATA[Ime]]></text>
+		</input>
+		<input id="inp_address">
+			<text><![CDATA[Adresa]]></text>
+		</input>
+		<input id="inp_postnum">
+			<text><![CDATA[POStanski broj]]></text>
+		</input>
+		<input id="inp_postname">
+			<text><![CDATA[Grad]]></text>
+		</input>
+		<input id="inp_discount">
+			<text><![CDATA[0% popust]]></text>
+		</input>
+	</inputBoxes>
+	<checkBoxes>
+		<checkbox id="chk_show_mine_only">
+			<label><![CDATA[Prikazi moje samo]]></label>
+		</checkbox>
+		<checkbox id="chk_articles_merge">
+			<label><![CDATA[Udruži količine istih artikala]]></label>
+		</checkbox>
+		<checkbox id="chk_article_add">
+			<label><![CDATA[Brzo dodavanje artikala na porudžbinu]]></label>
+		</checkbox>
+		<checkbox id="chk_order_self">
+			<label><![CDATA[Prikaži samo moje porudžbine]]></label>
+		</checkbox>
+		<checkbox id="chk_taxcommited">
+			<label><![CDATA[Vidljiv PDV]]></label>
+		</checkbox>
+		<checkbox id="chk_foreign">
+			<label><![CDATA[HQ abroad]]></label>
+		</checkbox>
+	</checkBoxes>
+	<titles>
+		<title id="article_most_used">
+			<text><![CDATA[Najprodavaniji artikli]]></text>
+		</title>
+		<title id="article_most_used_num">
+			<text><![CDATA[Prikazi ##NUM## top artikala]]></text>
+		</title>
+		<title id="article_edit">
+			<text><![CDATA[Izmeni artikal]]></text>
+		</title>
+		<title id="articles">
+			<text><![CDATA[Prodajni artikli]]></text>
+		</title>
+		<title id="groups">
+			<text><![CDATA[Grupe]]></text>
+		</title>
+		<title id="orders">
+			<text><![CDATA[Porudžbine]]></text>
+		</title>
+		<title id="settings">
+			<text><![CDATA[Podešavanja]]></text>
+		</title>
+		<title id="order_view">
+			<text><![CDATA[Pregled porudžbine]]></text>
+		</title>
+		<title id="order_opened">
+			<text><![CDATA[Otvoreno]]></text>
+		</title>
+		<title id="order_edit">
+			<text><![CDATA[Izmena porudžbine]]></text>
+		</title>
+		<title id="order_edit_new">
+			<text><![CDATA[Izmena NOVE porudžbine]]></text>
+		</title>
+		<title id="article_edit">
+			<text><![CDATA[Izmena artikla]]></text>
+		</title>
+		<title id="article_edit">
+			<text><![CDATA[Izmena artikla]]></text>
+		</title>
+		<title id="connection">
+			<text><![CDATA[Veza sa POS sistemom]]></text>
+		</title>
+		<title id="clients">
+			<text><![CDATA[Kupac]]></text>
+		</title>
+		<title id="positions">
+			<text><![CDATA[Porudžbine/Stolovi]]></text>
+		</title>
+		<title id="position_select">
+			<text><![CDATA[Biraj Porudžbinu/Sto]]></text>
+		</title>
+		<title id="client_add">
+			<text><![CDATA[Nadji kupca]]></text>
+		</title>
+		<title id="activated">
+			<text><![CDATA[Aktivni]]></text>
+		</title>
+	</titles>
+	<labels>
+		<label id="groups">
+			<text><![CDATA[Grupe]]></text>
+		</label>
+		<label id="articles">
+			<text><![CDATA[Artikli]]></text>
+		</label>
+		<label id="orders">
+			<text><![CDATA[Porudžbine]]></text>
+		</label>
+		<label id="settings">
+			<text><![CDATA[Touch]]></text>
+		</label>
+		<label id="article_comment_add">
+			<text><![CDATA[NOV KOMENTAR]]></text>
+		</label>
+		<label id="client_remove_from_order">
+			<text><![CDATA[Ukloni kupca sa poruzbine]]></text>
+		</label>
+		<label id="client_add_new">
+			<text><![CDATA[Nadji kupca]]></text>
+		</label>
+		<label id="connecting_with">
+			<text><![CDATA[Povezivanje sa]]></text>
+		</label>
+		<label id="connecting_error">
+			<text><![CDATA[Greška kod povezivanja...
+Pokušaj ponovo!]]></text>
+		</label>
+		<label id="invoicing_success">
+			<text><![CDATA[Račun je izdat na: '##DEVICE##' i štampat će se na: '##PRINTER##']]></text>
+		</label>
+		<label id="invoicing_error">
+			<text><![CDATA[Greška kod kreiranja računa! Pokušaj direktno na POS-u:]]></text>
+		</label>
+		<label id="invoicing_make">
+			<text><![CDATA[Kreiranje računa...]]></text>
+		</label>
+		<label id="order_save">
+			<text><![CDATA[Spremam porudžbinu...]]></text>
+		</label>
+		<label id="order_list">
+			<text><![CDATA[Pregled porudžbina...]]></text>
+		</label>
+		<label id="order_list_none">
+			<text><![CDATA[Nema sačuvanih porudžbina]]></text>
+		</label>
+		<label id="table_list_none">
+			<text><![CDATA[Nema konfigurisanih stolova]]></text>
+		</label>
+		<label id="payment">
+			<text><![CDATA[Plaćanje]]></text>
+		</label>
+		<label id="customer_saving_error">
+			<text><![CDATA[Greška kod spremanja stranke. Pokušaj ponovno ili sredi na POS-u.]]></text>
+		</label>
+		<label id="click_to_close">
+			<text><![CDATA[Dodirni tu da sakriješ ovu poruku]]></text>
+		</label>
+		<label id="error_orders_retrieve">
+			<text><![CDATA[Ne mogu dobiti stolove, greška u POS konekciji! Proverite i pokušajte ponovo.]]></text>
+		</label>
+		<label id="error_order_store">
+			<text><![CDATA[Porudžbina nije sačuvana, greška u vezi sa POS-om! Proverite i pokušajte ponovo.]]></text>
+		</label>
+	</labels>
+	<alerts>
+		<alert id="error_network">
+			<title><![CDATA[Greška: WiFi]]></title>
+			<text> <![CDATA[Uključite WiFi na vašem uredžaju i pokušajte ponovo]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[OK]]></okLabel>
+		</alert>
+		<alert id="article_comment">
+			<title><![CDATA[Dodaj komentar za artikal]]></title>
+			<text> <![CDATA[Unesi komentar za artikal]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="deauth">
+			<title><![CDATA[Deaktiviranje uređaja...]]></title>
+			<text><![CDATA[Da li ste sigurni da želite da deaktivirate uređaj? Moraćete da pozovete NAV Soft d.o.o. i aktivirate uređaj ponovo pre sledećeg korišćenja. Kod je 5515.]]></text>
+		</alert>
+		<alert id="auth">
+			<title><![CDATA[Obaveštenje]]></title>
+			<text><![CDATA[Unesite vašu PIN lozinku]]></text>
+			<prompt><![CDATA[PIN lozinka]]></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="unauthorized">
+			<title><![CDATA[Pristup odbijen]]></title>
+			<text><![CDATA[PIN nije dobar. Pokušajte ponovo...]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="activationFailed">
+			<title><![CDATA[Aktiviranje neuspesno]]></title>
+			<text><![CDATA[Proveri unesene podace, svoju internet vezu i pokušaj ponovo.]]></text>
+			<okLabel><![CDATA[Pokusaj ponovo]]></okLabel>
+		</alert>
+		<alert id="activationFailedPermanently">
+			<title><![CDATA[Aktivacija neuspesna]]></title>
+			<text><![CDATA[Aktivacija je ogranicena na odredjeni broj pokusaja. Dostigli ste maksimalno. Aplikacija ce se zatvoriti. Pokrenite SKY POS i unesite tacan kod za aktiviranje i poreski broj. Hvala!]]></text>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="activationSuccessfull">
+			<title><![CDATA[Aktivacija uspešna]]></title>
+			<text><![CDATA[SKY POS aktivacija na ovom uređaju je uspešna. Nastavi.]]></text>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="activationTypeUnknown">
+			<title><![CDATA[Greska pri aktivaciji]]></title>
+			<text><![CDATA[Aktivacija je prekinuta iz nepoznatih razloga.]]></text>
+			<okLabel><![CDATA[Zatvori]]></okLabel>
+		</alert>
+		<alert id="selectCustomer">
+			<title><![CDATA[Izaberi kupca]]></title>
+			<text><![CDATA[Izaberite prvo kupca, zatim odstampajte priznanicu ako zelite da koristite ovaj nacin placanja.]]></text>
+			<okLabel><![CDATA[U redu]]></okLabel>
+			<cancelLabel></cancelLabel>
+		</alert>
+		<alert id="selectPrinter">
+			<title><![CDATA[Odaberi štampač]]></title>
+			<text><![CDATA[Pre izdavanjem računa, odaberite štampač (Touch)]]></text>
+			<okLabel><![CDATA[U redu]]></okLabel>
+			<cancelLabel></cancelLabel>
+		</alert>
+		<alert id="workTimeRegistration">
+			<title><![CDATA[Radno vreme]]></title>
+			<text><![CDATA[Prvo se prijavite u Radno Vreme na vašoj blagajni.]]></text>
+			<okLabel><![CDATA[U redu]]></okLabel>
+			<cancelLabel></cancelLabel>
+		</alert>
+		<alert id="TABLE_take_over_user">
+			<title><![CDATA[Sto je zauzet]]></title>
+			<text><![CDATA[Sto je zauzet od strane drugog korisnika. Nemate dozvolu za preuzimanje stolova. Kontaktirajte managera i na POS blagajnoj preuzmite sto.]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="invoice_already_printed">
+			<title><![CDATA[Ovaj račun nije moguče izdati!]]></title>
+			<text><![CDATA[Porudžbina je bila več poračunata na: ]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="order_local_warning">
+			<title><![CDATA[Akcija nije dozvoljena!]]></title>
+			<text><![CDATA[Postoji neobradžena Porudžbina. Prvo obradi otvorenu porudžbinu!]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="order_changed_on_pos">
+			<title><![CDATA[Porudžbina NIJE sačuvana!]]></title>
+			<text><![CDATA[Porudžbina je u radu na POS-u.]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="comming_soon">
+			<title><![CDATA[Radimo na tome!]]></title>
+			<text><![CDATA[Funkcija je u izradni, radimo na tome.]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="split_transfer_start">
+			<title><![CDATA[Količina prenosa]]></title>
+			<text><![CDATA[Unesite količinu ##ARTICLE## koju želite prenositi.\nStara količina: ]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+		<alert id="split_transfer_too_big">
+			<title><![CDATA[Količina prenosa]]></title>
+			<text><![CDATA[Količina prenosa ##ARTICLE## je veća od postojeće količine.]]></text>
+			<prompt></prompt>
+			<okLabel><![CDATA[U redu]]></okLabel>
+		</alert>
+	</alerts>
+</language>
