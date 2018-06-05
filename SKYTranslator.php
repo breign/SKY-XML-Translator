@@ -44,24 +44,49 @@ function main($masterFile, $clonedFile)
         die("XML ROOT error");
     }
 
+    /**
+     * True until we find that master and client
+     * are different. We need this to write a nice
+     * message to user at the end of parsing.
+     */
     $xmlsEqual = true;
 
     /**
-     * Go through all main items and check if they are the same
+     * Go through all main items and check if they are equal
      * between master and client xml.
      */
     foreach ($mXML as $entry) {
         debug('normal', '[' . $entry->getName() . ']');
-        $isEqual = xmlCompareNode($entry, $cXML);
 
+        $isEqual = xmlCompareNode($entry, $cXML);
         $xmlsEqual = $xmlsEqual && $isEqual;
     }
 
     if ($xmlsEqual) {
         echo "\n\n ******* XML elements ARE equal! ********\n\n";
     } else {
-        echo "\n\n !!!!!!! XML elements are NOT equal !!!!!!!!!\n\n";
+        echo "\n\n !!!!!!! XML elements are NOT equal !!!!!!!!!";
+
+        $newXMLFile = saveXML($cXML);
+        echo "\n\n         See: $newXMLFile\n\n";
     }
+}
+
+/**
+ * Saves a pretty print version of XML.
+ */
+function saveXML($XML)
+{
+    $newXMLFile = "new_clone_" . time() . ".xml";
+
+    $domxml = new DOMDocument('1.0');
+    $domxml->preserveWhiteSpace = false;
+    $domxml->formatOutput = true;
+
+    $domxml->loadXML($XML->asXML());
+    $domxml->save($newXMLFile);
+
+    return $newXMLFile;
 }
 
 /**
@@ -103,32 +128,68 @@ function getAttributes($node)
 }
 
 /**
- * Returns XML element from client that has
- * given tag and attributes.
+ * Finds XML node in client XML that has given tag
+ * and attributes. Returns null if this kind of
+ * node does not exist.
  */
 function findInClient($cXML, $tag, $attributes)
 {
+    /**
+     * We only need to check root elements. Child
+     * elements will be checked recursivelly in later
+     * steps.
+     */
     foreach ($cXML as $entry) {
         $cTag = $entry->getName();
         $cAttributes = getAttributes($entry);
 
         if ($tag !== $cTag) {
-            // Not the right tag, this one has different name. Keep searching.
+            // Not the right tag, this one has different name.
+            // Keep searching.
             continue;
         }
 
         if ($attributes && !areAttributesEqual($attributes, $cAttributes)) {
-            // Not the right tag, this one has different attribute values. Keep searching.
+            // Not the right tag, this one has different attribute
+            // values. Keep searching.
             continue;
         }
 
         /**
-         * We have found the same tag in client xml
+         * Nice, we have found the same tag, let's return it
          */
         return $entry;
     }
 
     return null;
+}
+
+/**
+ * This function removes node content and writes
+ * FIXME into it. If node has child elements, FIXME
+ * gets written to all child elements also.
+ */
+function markAsFixMe(&$mXMLNode)
+{
+    $txt = (string)$mXMLNode;
+
+    if (!$mXMLNode->count()) {
+        $mXMLNode[0] = "FIXME";
+        return;
+    }
+
+    foreach ($mXMLNode as $entry) {
+        markAsFixMe($entry);
+    }
+}
+
+/**
+ * Appends one XML part into another
+ */
+function xmlAppend(SimpleXMLElement $to, SimpleXMLElement $from) {
+    $toDom = dom_import_simplexml($to);
+    $fromDom = dom_import_simplexml($from);
+    $toDom->appendChild($toDom->ownerDocument->importNode($fromDom, true));
 }
 
 function xmlCompareNode($mXMLNode, $cXML, $depth = 1)
@@ -151,6 +212,15 @@ function xmlCompareNode($mXMLNode, $cXML, $depth = 1)
         debug('warning', "MISSING: $mTag " . json_encode($mAttributes), $depth);
 
         /**
+         * This mXMLNode is missing in client XML. We'll first
+         * mark it as FIXME and then we'll append it to
+         * client XML.
+         */
+        markAsFixMe($mXMLNode);
+
+        xmlAppend($cXML, $mXMLNode);
+
+        /**
          * If tag is missing in clone, no need to check for any of child nodes.
          */
         return false;
@@ -166,7 +236,7 @@ function xmlCompareNode($mXMLNode, $cXML, $depth = 1)
      */
     foreach ($mXMLNode as $entry) {
         $isEqual = xmlCompareNode($entry, $cXMLNode, $depth + 1);
-        $isNodeEqual = $isNodeEqual & $isEqual;
+        $isNodeEqual = $isNodeEqual && $isEqual;
     }
 
     return $isNodeEqual;
