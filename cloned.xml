@@ -72,11 +72,11 @@
 		<textbox id="txt_activation">
 			<text><![CDATA[
 Da bi aktivirali aplikaciju, morate dobiti aktivacioni kod od strane zastupnika NAV Soft d.o.o.
-			
-Obratite se na broj: 
+
+Obratite se na broj:
 +381 (0) 61 1400077
 		]]></text>
-		</textbox>		
+		</textbox>
 		<textbox id="txt_activation_start">
 			<text><![CDATA[Aktivacija se obradjuje. Trenutak molim Vas..]]></text>
 		</textbox>
@@ -364,7 +364,7 @@ Pokušaj ponovo!]]></text>
 			<prompt></prompt>
 			<okLabel><![CDATA[U redu]]></okLabel>
 		</alert>
-		<alert id="comming_soon">
+		<alert id="comming_soon-HIDDEN">
 			<title><![CDATA[Radimo na tome!]]></title>
 			<text><![CDATA[Funkcija je u izradni, radimo na tome.]]></text>
 			<prompt></prompt>
