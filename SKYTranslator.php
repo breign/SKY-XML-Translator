@@ -3,7 +3,7 @@
 $usage = <<<USAGE
 SKYTranslator takes master and cloned xml and then stdouts fixed clone,
               with all the elements in the same order, and with all
-              the missing CDATA prepended with !FIXME! copied from master
+              the missing CDATA prepended with !FIXME: copied from master
 
 php SKYTranslator.php [master.xml] [cloned.xml] > [stdout|new_clone_fixed.xml]
   master.xml is the master xml
@@ -32,6 +32,7 @@ main($masterFile, $clonedFile);
 function main($masterFile, $clonedFile)
 {
     $mXML = new SimpleXMLElement($masterFile, 0, true);
+#    $mXML = simplexml_load_string(file_get_contents($masterFile), 'SimpleXMLElement', LIBXML_NOCDATA);
     $cXML = new SimpleXMLElement($clonedFile, 0, true);
 
     $masterRoot = $mXML->getName();
@@ -45,7 +46,7 @@ function main($masterFile, $clonedFile)
     }
 
     /**
-     * True until we find that master and client
+     * True until we find that master and clone
      * are different. We need this to write a nice
      * message to user at the end of parsing.
      */
@@ -53,7 +54,7 @@ function main($masterFile, $clonedFile)
 
     /**
      * Go through all main items and check if they are equal
-     * between master and client xml.
+     * between master and clone xml.
      */
     foreach ($mXML as $entry) {
         debug('normal', '[' . $entry->getName() . ']');
@@ -80,11 +81,14 @@ function saveXML($XML)
     $newXMLFile = "new_clone_" . time() . ".xml";
 
     $domxml = new DOMDocument('1.0');
+    $domxml->encoding = 'utf-8';
     $domxml->preserveWhiteSpace = false;
     $domxml->formatOutput = true;
-
-    $domxml->loadXML($XML->asXML());
-    $domxml->save($newXMLFile);
+    $domxml->loadXML(
+        str_replace(array('&lt;','&gt;'),array('<','>')
+        ,$XML->asXML())
+    );
+    $domxml->save($newXMLFile,LIBXML_NOEMPTYTAG);
 
     return $newXMLFile;
 }
@@ -128,11 +132,11 @@ function getAttributes($node)
 }
 
 /**
- * Finds XML node in client XML that has given tag
+ * Finds XML node in clone XML that has given tag
  * and attributes. Returns null if this kind of
  * node does not exist.
  */
-function findInClient($cXML, $tag, $attributes)
+function findInClone($cXML, $tag, $attributes)
 {
     /**
      * We only need to check root elements. Child
@@ -174,7 +178,7 @@ function markAsFixMe(&$mXMLNode)
     $txt = (string)$mXMLNode;
 
     if (!$mXMLNode->count()) {
-        $mXMLNode[0] = "FIXME";
+        (strlen($mXMLNode[0])) ? $mXMLNode[0] = "<![CDATA[!FIXME:".$mXMLNode[0]."]]>" : $mXMLNode[0] = "";
         return;
     }
 
@@ -203,7 +207,7 @@ function xmlCompareNode($mXMLNode, $cXML, $depth = 1)
     /**
      * We try to find master's tag with the same attributes in clone xml
      */
-    $cXMLNode = findInClient($cXML, $mTag, $mAttributes);
+    $cXMLNode = findInClone($cXML, $mTag, $mAttributes);
     $found = $cXMLNode !== null;
 
     if ($found) {
@@ -212,9 +216,9 @@ function xmlCompareNode($mXMLNode, $cXML, $depth = 1)
         debug('warning', "MISSING: $mTag " . json_encode($mAttributes), $depth);
 
         /**
-         * This mXMLNode is missing in client XML. We'll first
+         * This mXMLNode is missing in clone XML. We'll first
          * mark it as FIXME and then we'll append it to
-         * client XML.
+         * clone XML.
          */
         markAsFixMe($mXMLNode);
 
