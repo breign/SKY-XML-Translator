@@ -69,7 +69,9 @@ function main($masterFile, $clonedFile)
         echo "\n\n !!!!!!! XML elements are NOT equal !!!!!!!!!";
 
         $newXMLFile = saveXML($cXML);
-        echo "\n\n         See: $newXMLFile\n\n";
+#        echo "\n\n         See: $newXMLFile\n\n";
+	$out = shell_exec('/bin/mv "'.$newXMLFile.'" "'.$clonedFile.'"');
+	echo $out;
     }
 }
 
